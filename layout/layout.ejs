@@ -4,18 +4,19 @@
 
 <body>
   <header id="header" class="inner"><%- partial('_partial/header') %></header>
-  <!-- ad start -->
-  <%- partial('_custom_ad/google_adsense') %>
-  <!-- ad end -->
   <div id="content" class="inner">
+    <!-- ad start -->
+    <%- partial('_custom_ad/google_adsense') %>
+    <!-- ad end -->
     <div id="main-col" class="alignleft"><div id="wrapper"><%- body %></div></div>
     <aside id="sidebar" class="alignright"><%- partial('_partial/sidebar', {}, {cache: true}) %></aside>
     <div class="clearfix"></div>
   </div>
+  <footer id="footer" class="inner"><%- partial('_partial/footer') %>
   <!-- ad start -->
   <%- partial('_custom_ad/google_adsense') %>
   <!-- ad end -->
-  <footer id="footer" class="inner"><%- partial('_partial/footer') %></footer>
+  </footer>
   <%- partial('_partial/after_footer') %>
 </body>
 </html>
