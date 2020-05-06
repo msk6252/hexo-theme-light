@@ -13,6 +13,9 @@
   title.push(config.title);
   %>
   <title><%= title.join(' | ') %></title>
+  <% if (is_post() && config.generator_amp) { %>
+  <link rel="amphtml" href="<%= config.url %>/<%= page.path %>/amp/index.html">
+  <% } %>
   <% if (config.author){ %><meta name="author" content="<%= config.author %>"><% } %>
   <% if (page.description){ %>
   <meta name="description" content="<%= page.description %>">
